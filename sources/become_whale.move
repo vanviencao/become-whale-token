@@ -4,7 +4,7 @@ module become_whale::become_whale {
     use sui::transfer;
     use sui::tx_context::{Self, TxContext};
 
-    public struct BWH has drop {}
+    struct BWH has drop {}
 
     const TOTAL_SUPPLY: u64 = 68_686_868_866_888_886;
 
