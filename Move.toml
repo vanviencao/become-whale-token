@@ -1,6 +1,7 @@
 [package]
 name = "become_whale"
 version = "0.0.1"
+edition = "2024.beta"
 
 [addresses]
 become_whale = "0x0"
