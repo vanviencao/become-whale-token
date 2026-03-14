@@ -4,11 +4,11 @@ module become_whale::become_whale {
     use sui::transfer;
     use sui::tx_context::{Self, TxContext};
 
-    struct BWH has drop {}
+    public struct BECOME_WHALE has drop {}
 
     const TOTAL_SUPPLY: u64 = 68_686_868_866_888_886;
 
-    fun init(witness: BWH, ctx: &mut TxContext) {
+    fun init(witness: BECOME_WHALE, ctx: &mut TxContext) {
         let (mut currency, mut treasury_cap) = coin_registry::new_currency_with_otw(
             witness,
             0,
@@ -19,7 +19,7 @@ module become_whale::become_whale {
             ctx
         );
 
-        let total_coin: Coin<BWH> = coin::mint(&mut treasury_cap, TOTAL_SUPPLY, ctx);
+        let total_coin: Coin<BECOME_WHALE> = coin::mint(&mut treasury_cap, TOTAL_SUPPLY, ctx);
 
         currency.make_supply_fixed(treasury_cap);
 
